@@ -2,3 +2,99 @@ body {
     font-family: Arial, Helvetica, sans-serif
 }
 
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+}
+
+#title, #description, #Profile{
+    padding-left: 15px;
+}
+
+#Projets > h1{
+    text-align: center;
+}
+
+#Projets > h3{
+    padding-left: 15px;
+}
+
+
+hr {
+    border:2px solid #007804;
+    margin:0;
+}
+
+.less {
+    border-width:1px;
+}
+
+.presentation {
+    background: center / cover;
+    position: relative;
+}
+
+.presentation::before {
+    content: '';
+    display: block;
+    height: 100%; width: 100%;
+    position: absolute;
+    z-index: -1;
+}
+
+.presentation:nth-child(2n) {
+    margin-top: -1%;
+}
+
+.presentation:nth-child(2n+1) {
+    margin-bottom: -1%;
+}
+
+.presentation > * {
+    display: inline-block;
+    vertical-align: middle;
+    z-index: 1;
+}
+
+.presentation > .text {
+    width: 35%;
+}
+
+.presentation:nth-child(2n+1) > .text {
+    text-align: right;
+    margin-right:4%;
+}
+
+.presentation:nth-child(2n) > .text {
+    text-align: left;
+    margin-left: 4%;
+}
+
+.presentation > .image {
+    background:center / cover ;
+    position: relative;
+    height: 600px;
+    width: 60%;
+}
+
+.presentation:nth-child(2n+1) > .image {
+    clip-path: polygon(0% 0%, 100% 0%, 75% 100%, 0% 100%);
+}
+
+.presentation:nth-child(2n) > .image {
+    clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.presentation > .image::before {
+    content: '';
+    display: block;
+    height: 100%; width: 100%;
+    position: absolute;
+}
+
+.presentation > .image > img {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
