@@ -19,7 +19,7 @@ hr {
 hr.ball {
     border: 0;
     height: 1px;
-    width: 10%;
+    width: 150px;
     position: relative;
     margin: auto;
     background: #007804;
@@ -71,10 +71,6 @@ hr.ball::before {
     display: inline-block;
     vertical-align: middle;
     z-index: 1;
-}
-
-.presentation .text {
-    width: 35%;
 }
 
 .presentation:nth-child(2n+1) .text {
@@ -141,33 +137,17 @@ hr.ball::before {
 }
 
 .roundedPres{
-    border: #007804 solid 2px;
-    border-radius: 5px;
     text-align: center;
-    width: fit-content;
     margin: auto;
-    width: 50%;
     margin-top: 2%;
     margin-bottom: 2%;
     padding: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
-.roundedPres:nth-child(3n){
-    margin-right: 20%;
-}
-
-.roundedPres:nth-child(3n+2){
-    margin-left: 20%;
-}
-
-.roundedPres > *{
-    vertical-align: middle;
-    margin-right: 4%;
-}
-
-.roundedPres .text{
-    width: 50%;
-    border-radius: 5px;
+.roundedPres .image{
+    max-width: 250px;
 }
 
 .subtitle{
@@ -185,12 +165,22 @@ hr.ball::before {
     font-size: xxx-large;
     text-align: center;
     color: #007804;
-    padding-bottom: 50px;
-    padding-top: 50px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+#fullPage {
+    height: 100vh;
 }
 
 #title > h1 {
     margin: 0;
+    padding-bottom: 50px;
 }
 
 .title {
@@ -202,4 +192,67 @@ hr.ball::before {
     font-size: large;
     margin-left: 10%;
     margin-right: 10%;
+}
+
+@media screen and (min-width: 880px) {
+    .roundedPres:nth-child(3n){
+        margin-right: 20%;
+    }
+    
+    .roundedPres:nth-child(3n+2){
+        margin-left: 20%;
+    }
+    
+    .roundedPres > *{
+        vertical-align: middle;
+        margin-right: 4%;
+    }
+
+    .roundedPres{
+        border: #007804 solid 2px;
+        border-radius: 5px;
+        width: fit-content;
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 1222px) {
+    .roundedPres{
+        width: 70%;
+    }
+
+    .presentation .image {
+        display: none;
+    }
+
+    .presentation {
+        text-align: center;
+    }
+
+    .presentation * {
+        text-align: center;
+    }
+
+    .presentation .text{
+        margin: 5px 1px  !important;
+    }
+}
+
+@media screen and (min-width: 1222px) {
+
+    .presentation .text {
+        width: 35%;
+    }
+}
+
+@media screen and (max-width: 880px) {
+    .roundedPres{
+        width: 98%;
+    }
+}
+
+@media screen and (min-width: 550px) {
+    .roundedPres .text {
+        width: 50%;
+    }
 }
