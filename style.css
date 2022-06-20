@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
@@ -150,7 +152,7 @@ hr.ball::before {
     padding: 5px;
 }
 
-.roundedPres:nth-child(3n+1){
+.roundedPres:nth-child(3n){
     margin-right: 20%;
 }
 
@@ -184,6 +186,7 @@ hr.ball::before {
     text-align: center;
     color: #007804;
     padding-bottom: 50px;
+    padding-top: 50px;
 }
 
 #title > h1 {
@@ -191,6 +194,7 @@ hr.ball::before {
 }
 
 .title {
+    font-family: 'Roboto', sans-serif;
     font-family: Arial, Helvetica, sans-serif;
 }
 
