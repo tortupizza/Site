@@ -141,7 +141,7 @@ hr.ball::before {
     padding-top: 2ex;
 }
 
-.roundedPres{
+.roundedPres {
     border: #007804 solid 2px;
     border-radius: 5px;
     text-align: center;
@@ -153,25 +153,25 @@ hr.ball::before {
     padding: 5px;
 }
 
-.roundedPres:nth-child(3n){
+.roundedPres:nth-child(3n) {
     margin-right: 20%;
 }
 
-.roundedPres:nth-child(3n+2){
+.roundedPres:nth-child(3n+2) {
     margin-left: 20%;
 }
 
-.roundedPres > *{
+.roundedPres > * {
     vertical-align: middle;
     margin-right: 4%;
 }
 
-.roundedPres .text{
+.roundedPres .text {
     width: 50%;
     border-radius: 5px;
 }
 
-.subtitle{
+.subtitle {
     text-align: center;
     color: black;
     font-size: xx-large;
