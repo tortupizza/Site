@@ -1,31 +1,51 @@
-body {
-    font-family: Arial, Helvetica, sans-serif
+@font-face {
+    font-family: WhereMyKeys;
+    src: url("font/WhereMyKeys.otf");
 }
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
+    overflow-x: hidden;
 }
 
-#title, #description, #Profile{
-    padding-left: 15px;
-}
-
-#Projets > h1{
+h3{
     text-align: center;
+    font-size: xxx-large;
 }
-
-#Projets > h3{
-    padding-left: 15px;
-}
-
 
 hr {
-    border:2px solid #007804;
-    margin:0;
+    border: #007804 2px solid;
+    margin: 0;
+}
+
+hr.ball {
+    border: 0;
+    height: 1px;
+    width: 10%;
+    position: relative;
+    margin: auto;
+    background: #007804;
+}
+
+hr.ball::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    background: #007804;
+    display: inline-block;
+    border: 2px solid #007804;
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    margin: 0 0 0 -3px;
+    transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
 }
 
 .less {
+    border-style: dashed;
     border-width:1px;
 }
 
@@ -50,51 +70,137 @@ hr {
     margin-bottom: -1%;
 }
 
-.presentation > * {
+.image, .text {
     display: inline-block;
     vertical-align: middle;
     z-index: 1;
 }
 
-.presentation > .text {
+.presentation .text {
     width: 35%;
 }
 
-.presentation:nth-child(2n+1) > .text {
+.presentation:nth-child(2n+1) .text {
     text-align: right;
     margin-right:4%;
 }
 
-.presentation:nth-child(2n) > .text {
+.presentation:nth-child(2n) .text {
     text-align: left;
     margin-left: 4%;
 }
 
-.presentation > .image {
+.presentation .image {
     background:center / cover ;
     position: relative;
     height: 600px;
     width: 60%;
 }
 
-.presentation:nth-child(2n+1) > .image {
-    clip-path: polygon(0% 0%, 100% 0%, 75% 100%, 0% 100%);
+.presentation:nth-child(2n+1) .image {
+    clip-path: polygon(0% 0%, 75% 0%, 95% 50%, 75% 100%, 0% 100%);
 }
 
-.presentation:nth-child(2n) > .image {
-    clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
+.presentation:nth-child(2n) .image {
+    clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 5% 50%);
+    right: -15px;
 }
 
-.presentation > .image::before {
+.presentation:last-child .image {
+    clip-path: polygon(33% 0%, 100% 0%, 100% 100%, 0% 100%);
+    width: 70%;
+    margin-left: -10%;
+}
+
+.presentation .image::before {
     content: '';
     display: block;
     height: 100%; width: 100%;
     position: absolute;
 }
 
-.presentation > .image > img {
+.presentation .image > img {
     position: relative;
     top: 50%;
-    left: 50%;
     transform: translate(-50%,-50%);
+}
+
+.presentation:nth-child(2n+1) .image > img {
+    left: 40%;
+}
+
+.presentation:nth-child(2n) .image > img {
+    left: 60%;
+}
+
+#an2 {
+    background-color: #444;
+    color: white;
+}
+
+#an2 > h3 {
+    margin-top: 0;
+    padding-top: 2ex;
+}
+
+.roundedPres{
+    border: #007804 solid 2px;
+    border-radius: 5px;
+    text-align: center;
+    width: fit-content;
+    margin: auto;
+    width: 50%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    padding: 5px;
+}
+
+.roundedPres:nth-child(3n+1){
+    margin-right: 20%;
+}
+
+.roundedPres:nth-child(3n+2){
+    margin-left: 20%;
+}
+
+.roundedPres > *{
+    vertical-align: middle;
+    margin-right: 4%;
+}
+
+.roundedPres .text{
+    width: 50%;
+    border-radius: 5px;
+}
+
+.subtitle{
+    text-align: center;
+    color: black;
+    font-size: xx-large;
+}
+
+.subtitle h1 {
+    margin: 0;
+    padding: 20px;
+}
+
+#title {
+    font-size: xxx-large;
+    text-align: center;
+    color: #007804;
+    padding-bottom: 50px;
+}
+
+#title > h1 {
+    margin: 0;
+}
+
+.title {
+    font-family: WhereMyKeys;
+}
+
+#description {
+    font-size: large;
+    margin-left: 10%;
+    margin-right: 10%;
 }
