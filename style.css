@@ -86,7 +86,7 @@ hr.ball::before {
 .presentation .image {
     background:center / cover ;
     position: relative;
-    height: 600px;
+    height: 400px;
     width: 60%;
 }
 
@@ -159,6 +159,7 @@ hr.ball::before {
 .subtitle h1 {
     margin: 0;
     padding: 20px;
+    margin-top: 4%;
 }
 
 #title {
@@ -192,6 +193,13 @@ hr.ball::before {
     font-size: large;
     margin-left: 10%;
     margin-right: 10%;
+}
+
+#arrowDown {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;  
+    translate: -50% -0%;
 }
 
 @media screen and (min-width: 880px) {
