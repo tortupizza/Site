@@ -202,6 +202,16 @@ hr.ball::before {
     translate: -50% -0%;
 }
 
+footer{
+    padding: 1%;
+    text-align: right;
+    background-color: #007804;
+}
+
+.white{
+    color: white;
+}
+
 @media screen and (min-width: 880px) {
     .roundedPres:nth-child(3n){
         margin-right: 20%;
