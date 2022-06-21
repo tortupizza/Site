@@ -159,7 +159,8 @@ hr.ball::before {
 .subtitle h1 {
     margin: 0;
     padding: 20px;
-    margin-top: 4%;
+    padding-top: 70px;
+    margin-top: 2%;
 }
 
 #title {
@@ -206,6 +207,11 @@ footer{
     padding: 1%;
     text-align: right;
     background-color: #007804;
+}
+
+footer > div {
+    display: inline;
+    margin: 1%;
 }
 
 .white{
@@ -273,4 +279,39 @@ footer{
     .roundedPres .text {
         width: 50%;
     }
+}
+
+ul.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+}
+
+ul.navbar li {
+    float: left;
+}
+
+ul.navbar li a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+ul.navbar li a:hover {
+    background-color: #444;
+}
+
+ul.navbar li.active a {
+    background-color: #007804;
+}
+
+ul.navbar li.active a:hover {
+    background-color: #009f05;
 }
